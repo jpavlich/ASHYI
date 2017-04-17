@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.sakaiproject.lessonbuildertool.CaracteristicasRecursoImpl" table="CARACTERISTICAS_RECURSO" >
+<!--         <id name="idCaracteristicaRecurso" type="int"> -->
+<!--             <column name="idCaracteristicaRecurso" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+        
+      	<composite-id>
+      		<key-many-to-one name="idRecurso" class="org.sakaiproject.lessonbuildertool.RecursoImpl" column="IDRECURSO" />
+			<key-many-to-one name="idCaracteristica" class="org.sakaiproject.lessonbuildertool.CaracteristicaImpl" column="IDCARACTERISTICA" />
+<!-- 			<key-property name="idRecurso" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+    </class>
+</hibernate-mapping>

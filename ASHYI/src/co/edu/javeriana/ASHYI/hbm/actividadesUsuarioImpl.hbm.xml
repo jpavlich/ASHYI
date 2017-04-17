@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+
+    Copyright (C) 2014 Pontificia Universidad Javeriana
+
+    Proyecto ASHYI
+
+-->
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.ActividadesUsuarioImpl" table="ACTIVIDADES_USUARIO" >
+<!--         <id name="idActividadUsuario" type="int"> -->
+<!--             <column name="idActividadUsuario" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+		<composite-id>
+      		<key-many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" column="IDACTIVIDAD" />
+			<key-many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" column="IDUSUARIO" />
+<!-- 			<key-property name="idActividad" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+<!--         <many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" fetch="select"> -->
+<!--             <column name="IDACTIVIDAD" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" fetch="select"> -->
+<!--             <column name="IDUSUARIO" /> -->
+<!--         </many-to-one> -->
+        <property name="realizada" type="boolean">
+            <column name="REALIZADA" />
+        </property>
+        <property name="nota" type="double">
+            <column name="NOTA" />
+        </property>
+        <property name="calificacion_usuario" type="int">
+            <column name="CALIFICACION_USUARIO" />
+        </property>
+        <property name="retroalimentacion_usuario" type="java.lang.String">
+            <column name="RETROALIMENTACION_USUARIO" />
+        </property>
+        <property name="retroalimentacion_profesor" type="java.lang.String">
+            <column name="RETROALIMENTACION_PROFESOR" />
+        </property>
+    </class>
+</hibernate-mapping>
+

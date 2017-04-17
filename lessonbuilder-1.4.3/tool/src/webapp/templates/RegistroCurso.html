@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
+<script rsf:id="scr=portal-matter" type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+<link rsf:id="scr=portal-matter" href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+<link rsf:id="scr=portal-matter" href="/library/skin/default/tool.css" type="text/css" rel="stylesheet" media="all" />
+<link rel="stylesheet" rsf:id="scr=rewrite-url" href="../css/Simplepagetool.css" type="text/css"/>
+<title rsf:id="msg=simplepage.control.nuevo"></title>
+<!-- .actions { -->
+<!--  white-space: nowrap; -->
+<!--  width: 1px; -->
+<!-- } -->
+
+</head>
+<body rsf:id="scr=sakai-body">
+	<div class="portletBody">
+		
+		<div rsf:id="error-div" class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="margin-bottom: 20px; margin-top:20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<span rsf:id="error"></span> </p>
+			</div>
+		</div>	
+		
+		<h2 rsf:id="msg=ashyiBean.registroCurso" style="color:#2E2EFE"></h2>
+		<br />
+
+		<div class="portletBody" style="width: 300px; height: 1000px;">
+		<form action="#" rsf:id="registroC">
+			<table id="list" role="list" bordercolor="#000000" border="2">
+				<tr>				
+					<td >
+						<h3 rsf:id="msg=ashyiBean.estadoCurso" style="color:#000000"></h3>
+			        </td>
+		         </tr>	
+				<tr>				
+					<td >
+						<h3 rsf:id="registro-label" style="color:#088A29"></h3>
+<!-- 			            <span rsf:id="registro-label" style="color:black"></span><span class="bold" ></span> -->
+			        </td>
+		        </tr>
+	        </table>
+	        <br />
+			<br />
+			<h3 rsf:id="msg=ashyiBean.objetivosRegCurso" style="color:#000000"></h3>
+			<br />
+			<br />
+			<table bordercolor="#000000" border="2">
+			<tr>
+				<td>
+					<a href="#" rsf:id="nuevaPalabra-link" class="nuevoObjetivo-link"><span rsf:id="msg=registro.nuevapalabra"></span></a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#" rsf:id="nuevoObjetivo-link" class="nuevoObjetivo-link"><span rsf:id="msg=registro.nuevoobjetivo"></span></a>
+				</td>
+			</tr>
+<!-- 				<tr>									 -->
+<!-- 					<td width="500"> -->
+<!--  			            <span rsf:id="objetivos-label" style="color:black"></span><span class="bold" ></span> --> 
+<!-- 							<h4 rsf:id="objetivos-label" style="color:black" /> -->
+<!-- 			        </td> -->
+<!-- 		        </tr>	 -->
+<!-- 				<tr> -->
+<!-- 			        <td> -->
+<!-- 			             <input type="text" size="33" maxlength="30" rsf:id="objetivo-nombre:"/> -->
+<!-- 			        </td>			         -->
+<!-- 				</tr>	 -->
+<!-- 				<tr> -->
+<!-- 					<td> -->
+<!-- 						<input type="submit" class="bold" rsf:id="submitObj" /> -->
+<!-- 					</td> -->
+<!-- 				</tr> -->
+			</table>
+			<br />
+			<br />
+			<h3 rsf:id="msg=ashyiBean.recursosCurso" style="color:#000000"></h3>
+			<br />
+			<br />
+			<table bordercolor="#000000" border="2">
+				<tr>					
+					<td width="500">
+<!-- 			            <span rsf:id="recursos-label" style="color:black"></span><span class="bold" ></span> -->
+							<br/>
+							<h4  rsf:id="recursos-label" style="color:black"/>
+			        </td>
+			        <td>
+			             <input type="text" size="33" maxlength="30" rsf:id="recurso-nombre:"/>
+			        </td>
+		        </tr>	
+				<tr>				        	
+        			<td>
+        				<span rsf:id="recursosLicencia-label" style="color:black"></span><span class="bold"></span>
+        			</td>
+        			<td>
+			             <select rsf:id="listaTiposLicencia" >
+		            		</select> 
+            		</td>
+       			</tr>
+        		<tr>
+        			<td>
+        				<span rsf:id="recursosTipo-label" style="color:black"></span><span class="bold"></span>
+        			</td>
+        			<td>
+			             <select rsf:id="listaTiposRecurso" >
+		            		</select> 
+            		</td>
+       			</tr>
+       			<tr>
+        			<td>
+        				<span rsf:id="recursosTipoAcceso-label" style="color:black"></span><span class="bold"></span>
+        			</td>
+        			<td>
+			             <select rsf:id="listaTiposAccesoRecurso" >
+		            		</select> 
+            		</td>
+       			</tr>
+        		<tr>
+        			<td>
+        				<span rsf:id="recursosCxt-label" style="color:black"></span><span class="bold"></span>
+        			</td>
+        			<td>
+			             <select rsf:id="listaCxtRecurso" >
+		            		</select> 
+            		</td>
+       			</tr>
+        		<tr>
+        			 <td>
+						<input type="submit" class="bold" rsf:id="submitRec" />
+					</td>
+        		</tr>	
+			</table>
+			<br />
+			<table>
+				<tr>					
+					<td>
+						<input type="submit" rsf:id="cancel" />	
+					</td>
+				</tr>
+			</table>
+			
+			<input type="hidden" rsf:id="item-id" id="item-id" />
+			
+		</form>
+		</div>
+	</div>
+</body>
+</html>

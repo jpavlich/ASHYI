@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+   <!-- Use the Sakai session factory, pre-configured, instead of one local to TaskList
+        we are adding our HBM files to the Sakai session factory instead of creating
+        our own copy of it -->
+  <bean id="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl.simplepage"
+        class="org.sakaiproject.springframework.orm.hibernate.impl.AdditionalHibernateMappingsImpl">
+    <property name="mappingResources">
+      <list>
+        <value>org/sakaiproject/lessonbuildertool/simplepageitem.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplepage.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplepagelogentry.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplepagegroup.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplepagecomment.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplestudentpage.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/simplepageproperty.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/itemImpl.hbm.xml</value>	
+		<value>org/sakaiproject/lessonbuildertool/tipo.hbm.xml</value>
+<!-- 		<value>org/sakaiproject/lessonbuildertool/actividadesUsuarioImpl.hbm.xml</value> -->
+		<value>org/sakaiproject/lessonbuildertool/caracteristicasTipoImpl.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/caracteristicaCaracteristicasImpl.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/caracteristicasUsuarioImpl.hbm.xml</value>				
+	 	<value>org/sakaiproject/lessonbuildertool/actividadimpl.hbm.xml</value>
+	 	<value>org/sakaiproject/lessonbuildertool/actividadTieneActividadImpl.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/caracteristicaActividadImpl.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/caracteristicasRecursoImpl.hbm.xml</value>
+		<value>org/sakaiproject/lessonbuildertool/caracteristicasItemsUsuarioImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/caracteristica.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/usuario.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/controlimpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/objetivoImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/palabraClaveImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/palabraClaveActividadImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/respuestaItemsUsuarioImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/palabraClaveObjetivoImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/objetivosActividadImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/recursoImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/recursosActividadImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/grafoImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/grafosUsuarioImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/grafoRelacionesImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/itemPlanImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/itemsUsuarioImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/actividadTieneItemPlanImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/logCaracteristicasImpl.hbm.xml</value>
+        <value>org/sakaiproject/lessonbuildertool/logGrafosImpl.hbm.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="org.sakaiproject.lessonbuildertool.model.SimplePageToolDaoTarget"
+        class="org.sakaiproject.lessonbuildertool.model.SimplePageToolDaoImpl"
+        singleton="true">
+    <property name="sessionFactory">
+      <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" />
+    </property>
+    <property name="dataSource" ref="javax.sql.DataSource"></property>
+    <property name="toolManager" ref="org.sakaiproject.tool.api.ActiveToolManager" />
+    <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService" />
+  </bean>
+  
+   <bean id="org.sakaiproject.lessonbuildertool.model.AshyiToolDaoTarget"
+        class="org.sakaiproject.lessonbuildertool.model.AshyiToolDaoImpl"
+        singleton="true">
+    <property name="sessionFactory">
+      <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalSessionFactory" />
+    </property>
+    <property name="dataSource" ref="javax.sql.DataSource"></property>
+    <property name="toolManager" ref="org.sakaiproject.tool.api.ActiveToolManager" />
+    <property name="securityService" ref="org.sakaiproject.authz.api.SecurityService" />
+  </bean>
+
+<!-- here's the version our code will access -->
+
+  <bean id="org.sakaiproject.lessonbuildertool.model.SimplePageToolDao"
+        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+        singleton="true">
+    <property name="transactionManager">
+      <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager" />
+    </property>
+    <property name="target">
+      <ref bean="org.sakaiproject.lessonbuildertool.model.SimplePageToolDaoTarget" />
+    </property>
+    <property name="proxyInterfaces">
+      <list>
+        <value>org.sakaiproject.lessonbuildertool.model.SimplePageToolDao</value>
+      </list>
+    </property>        
+    <property name="transactionAttributes">
+      <props>
+        <prop key="*">PROPAGATION_REQUIRED</prop>
+      </props>
+    </property>
+ </bean>
+ 
+  <bean id="org.sakaiproject.lessonbuildertool.model.AshyiToolDao"
+        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+        singleton="true">
+    <property name="transactionManager">
+      <ref bean="org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager" />
+    </property>
+    <property name="target">
+      <ref bean="org.sakaiproject.lessonbuildertool.model.AshyiToolDaoTarget" />
+    </property>
+    <property name="proxyInterfaces">
+      <list>
+        <value>org.sakaiproject.lessonbuildertool.model.AshyiToolDao</value>
+      </list>
+    </property>        
+    <property name="transactionAttributes">
+      <props>
+        <prop key="*">PROPAGATION_REQUIRED</prop>
+      </props>
+    </property>
+ </bean>
+
+  <bean id="org.sakaiproject.lessonbuildertool.LessonBuilderAccessAPI"
+        class="org.sakaiproject.lessonbuildertool.service.SimplePageToolService" init-method="init" lazy-init="false">
+  </bean>
+
+</beans>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- these mapping resource paths must point to your hibernate template files (.hbm.xml),
+            this should be the classpath location (typically after the src directory) -->
+          <mapping resource="org/sakaiproject/lessonbuildertool/simplepage.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/simplepageitem.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/simplepagecomment.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/simplepagegroup.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/simplepagelogentry.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/simplestudentpage.hbm.xml"/>
+		<mapping resource="org/sakaiproject/lessonbuildertool/itemImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/tipo.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/actividadimpl.hbm.xml"/>
+<!--         <mapping resource="org/sakaiproject/lessonbuildertool/actividadesUsuarioImpl.hbm.xml"/> -->
+		<mapping resource="org/sakaiproject/lessonbuildertool/caracteristicasTipoImpl.hbm.xml"/>
+		<mapping resource="org/sakaiproject/lessonbuildertool/caracteristicaCaracteristicasImpl.hbm.xml"/>
+		<mapping resource="org/sakaiproject/lessonbuildertool/caracteristicasUsuarioImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/actividadTieneActividadImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/caracteristicaActividadImpl.hbm.xml"/>
+		<mapping resource="org/sakaiproject/lessonbuildertool/caracteristicasItemsUsuarioImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/caracteristica.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/usuario.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/controlimpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/objetivoImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/palabraClaveImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/palabraClaveActividadImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/respuestaItemsUsuarioImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/palabraClaveObjetivoImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/objetivosActividadImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/recursosActividadImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/caracteristicasRecursoImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/itemsUsuarioImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/itemPlanImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/grafoImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/grafosUsuarioImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/grafoRelacionesImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/actividadTieneItemPlanImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/logCaracteristicasImpl.hbm.xml"/>
+        <mapping resource="org/sakaiproject/lessonbuildertool/logGrafosImpl.hbm.xml"/>
+        
+    </session-factory>
+</hibernate-configuration>

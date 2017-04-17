@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.CaracteristicasUsuarioImpl" table="CARACTERISTICAS_USUARIO" >
+<!--         <id name="idCaracteristicaUsuario" type="int"> -->
+<!--             <column name="idCaracteristicaUsuario" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+   		<composite-id>
+      		<key-many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" column="IDUSUARIO" />
+			<key-many-to-one name="idCaracteristica" class="co.edu.javeriana.ASHYI.hbm.CaracteristicaImpl" column="IDCARACTERISTICA" />
+<!-- 			<key-property name="idRecurso" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+<!--         <many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" fetch="select"> -->
+<!--             <column name="IDUSUARIO" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idCaracteristica" class="co.edu.javeriana.ASHYI.hbm.CaracteristicaImpl" fetch="select"> -->
+<!--             <column name="IDCARACTERISTICA" /> -->
+<!--         </many-to-one> -->
+        <property name="nivel" type="int">
+            <column name="NIVEL" />
+        </property>
+    </class>
+</hibernate-mapping>

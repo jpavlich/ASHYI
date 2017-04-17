@@ -1,0 +1,10 @@
+org.sakaiproject.lessonbuildertool
+org.sakaiproject.lessonbuildertool.cc
+org.sakaiproject.lessonbuildertool.ccexport
+org.sakaiproject.lessonbuildertool.model
+org.sakaiproject.lessonbuildertool.service
+org.sakaiproject.lessonbuildertool.tool.beans
+org.sakaiproject.lessonbuildertool.tool.evolvers
+org.sakaiproject.lessonbuildertool.tool.producers
+org.sakaiproject.lessonbuildertool.tool.view
+org.sakaiproject.lessonbuildertool.util

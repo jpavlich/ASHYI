@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+    <artifactId>Sakai-Besa</artifactId>
+    <groupId>co.edu.javeriana.ashiy</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+	
+	<name>Sakai-Besa - Components</name>
+	<groupId>co.edu.javeriana.ashiy</groupId>
+	<artifactId>Sakai-Besa-pack</artifactId>
+
+	<packaging>sakai-component</packaging>
+
+	<properties>
+    	<deploy.target>components</deploy.target>
+  	</properties>
+  	
+  	<dependencies>
+
+        <!-- internal dependencies -->
+        <dependency>
+            <groupId>co.edu.javeriana.ashiy</groupId>
+			<artifactId>Sakai-Besa-impl</artifactId>			
+			<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <build />
+
+	<version>0.0.1-SNAPSHOT</version>
+</project>

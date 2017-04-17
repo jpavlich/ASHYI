@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.sakaiproject.lessonbuildertool.RecursoImpl" table="RECURSO">
+        <id name="idRecurso" type="int">
+            <column name="IDRECURSO" />
+            <generator class="assigned" />
+        </id>
+        <property name="idItemSakai" type="java.lang.String">
+            <column name="IDITEMSAKAI" />
+        </property>
+    </class>
+</hibernate-mapping>

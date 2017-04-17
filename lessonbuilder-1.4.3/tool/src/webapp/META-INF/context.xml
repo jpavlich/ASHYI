@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	  <Resource name="bean/BeanBESAKISS" auth="Container"
+		type="co.edu.javeriana.ashyi.ASHYIControlador.BeanASHYI" factory="org.apache.naming.factory.BeanFactory"
+		bar="23" singleton="true" />
+</Context>

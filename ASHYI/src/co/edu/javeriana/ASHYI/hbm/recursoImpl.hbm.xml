@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.RecursoImpl" table="RECURSO">
+        <id name="idRecurso" type="int">
+            <column name="IDRECURSO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="naturaleza" type="java.lang.String">
+            <column name="NATURALEZA" />
+        </property>
+        <property name="idItemSakai" type="java.lang.String">
+            <column name="IDITEMSAKAI" />
+        </property>
+        <property name="tipo" type="java.lang.String">
+            <column name="TIPO" />
+        </property>
+        <property name="formato" type="java.lang.String">
+            <column name="FORMATO" />
+        </property>
+        <property name="nivel" type="java.lang.String">
+            <column name="NIVEL" />
+        </property>
+        <property name="tipo_acceso" type="java.lang.String">
+            <column name="TIPO_ACCESO" />
+        </property>
+        <bag name="caracteristicas" inverse="false" table="CARACTERISTICAS_RECURSO" lazy="true" >
+        <!--<list name="caracteristicas" table="CARACTERISTICAS_ACTIVIDAD" lazy="true" fetch="select" > -->
+            <key >
+                <column name="IDACTIVIDAD"/>
+            </key>
+<!--             <list-index column="ORDEN"/> -->
+            <one-to-many class="co.edu.javeriana.ASHYI.hbm.CaracteristicasRecursoImpl"  not-found="ignore"/>
+        </bag>
+    </class>
+</hibernate-mapping>

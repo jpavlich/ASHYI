@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<script rsf:id="scr=portal-matter" type="text/javascript"
+	language="JavaScript" src="/library/js/headscripts.js"></script>
+<link rsf:id="scr=portal-matter" href="/library/skin/tool_base.css"
+	type="text/css" rel="stylesheet" media="all" />
+<link rsf:id="scr=portal-matter" href="/library/skin/default/tool.css"
+	type="text/css" rel="stylesheet" media="all" />
+<link rel="stylesheet" rsf:id="scr=rewrite-url"
+	href="../css/Simplepagetool.css" type="text/css" />
+<link rel="stylesheet" href="../css/BeatPicker.min.css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/BeatPicker.min.js"></script>
+<script language="javascript" type="text/javascript" src="datetimepicker.js"></script>
+<script type='text/javascript'>
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split('=');      
+               if(vars[0] == variable){return pair[1];}
+       return(false);
+}
+
+</script>
+</head>
+<body rsf:id="scr=sakai-body">
+<h3 rsf:id="msg=grafo.lista" style="color:#045FB4"></h3>
+<br />
+	<div class="portletBody" style="width: 1000px; height: 1000px;">	
+		<form action="#" rsf:id="actividadesF">
+			<table id="list" role="list" width="100%" border="2" align="left"
+				cellspacing="0" bordercolor="#000000" bgcolor="#F2F2F2">
+				<tr>		
+					<td>
+						<span rsf:id="actividadesSpan"/>							
+							<ul id="list" border="0" role="main">
+								<li rsf:id="actividad:" style="list-style-type:none">
+									<span rsf:id="link-textactividad"></span>
+								</li>
+							</ul>	
+					</td>
+				</tr>
+<!-- 				<tr> -->
+<!-- 					<td><input type="submit" rsf:id="cancel" /></td> -->
+<!-- 				</tr> -->
+			</table>
+			
+			<input type="hidden" rsf:id="item-id" id="idG" />
+			<script>
+
+			var id = getQueryVariable("id"); 
+			document.getElementById('idG').innerHTML = id;
+			</script>
+		</form>
+	</div>
+</body>
+</html>

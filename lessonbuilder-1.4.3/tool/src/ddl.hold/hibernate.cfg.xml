@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- these mapping resource paths must point to your hibernate template files (.hbm.xml),
+            this should be the classpath location (typically after the src directory) -->
+        <mapping file="simplepageitem.hbm.xml" />
+        <mapping file="tipo.hbm.xml"/>
+        <mapping file="itemImpl.hbm.xml"/>
+        <mapping file="actividadimpl.hbm.xml" />
+        <mapping file="actividadesUsuarioImpl.hbm.xml"/>
+        <mapping file="caracteristicaCaracteristicasImpl.hbm.xml"/>
+		<mapping file="caracteristicasTipoImpl.hbm.xml"/>
+		<mapping file="caracteristicasUsuarioImpl.hbm.xml"/>
+        <mapping file="actividadTieneActividadImpl.hbm.xml"/>
+        <mapping file="caracteristicaActividadImpl.hbm.xml"/>
+		<mapping file="caracteristicasItemsUsuarioImpl.hbm.xml"/>
+        <mapping file="caracteristica.hbm.xml" />
+        <mapping file="usuario.hbm.xml" />
+        <mapping file="controlimpl.hbm.xml" />
+        <mapping file="objetivoImpl.hbm.xml"/>
+<!--         <mapping file="objetivoRelacionImpl.hbm.xml"/> -->
+        <mapping file="objetivosActividadImpl.hbm.xml"/>
+        <mapping file="recursoImpl.hbm.xml"/>
+        <mapping file="recursosActividadImpl.hbm.xml"/>
+        <mapping file="itemsUsuarioImpl.hbm.xml"/>
+        <mapping file="actividadTieneItemPlanImpl.hbm.xml"/>
+        <mapping file="logCaracteristicasImpl.hbm.xml"/>
+        <mapping file="logGrafosImpl.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

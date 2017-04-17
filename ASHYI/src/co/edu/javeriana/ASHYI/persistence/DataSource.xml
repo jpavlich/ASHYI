@@ -1,0 +1,33 @@
+<!--
+
+    Copyright (C) 2014 Pontificia Universidad Javeriana
+
+    Proyecto ASHYI
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+<bean 
+class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location">
+		<value>co/edu/javeriana/ASHYI/persistence/database.properties</value>
+	</property>
+</bean>
+ 
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
+<!--          class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+		
+	<property name="driverClassName" value="${jdbc.driverClassName}" />
+	<property name="url" value="${jdbc.url}" />
+	<property name="username" value="${jdbc.username}" />
+	<property name="password" value="${jdbc.password}" />
+<!-- 	<property name="initialSize" value="${jdbc.iS}" /> -->
+<!-- 	<property name="maxActive" value="${jdbc.mA}" />	 -->
+<!-- 	<property name="maxIdle" value="${jdbc.mI}" />		 -->
+</bean>
+ 
+</beans>

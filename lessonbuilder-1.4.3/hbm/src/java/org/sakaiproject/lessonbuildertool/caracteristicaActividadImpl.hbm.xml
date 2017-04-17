@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.sakaiproject.lessonbuildertool.CaracteristicaActividadImpl" table="CARACTERISTICAS_ACTIVIDAD" >
+<!--         <id name="idCaracteristicaActividad" type="int"> -->
+<!--             <column name="idCaracteristicaActividad" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+        
+      	<composite-id>
+      		<key-many-to-one name="idActividad" class="org.sakaiproject.lessonbuildertool.ActividadImpl" column="IDACTIVIDAD" />
+			<key-many-to-one name="idCaracteristica" class="org.sakaiproject.lessonbuildertool.CaracteristicaImpl" column="IDCARACTERISTICA" />
+<!-- 			<key-property name="idActividad" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+		
+<!-- 		<many-to-one name="idActividad" -->
+<!-- 		    class="org.sakaiproject.lessonbuildertool.ActividadImpl" -->
+<!--             column="IDACTIVIDAD" -->
+<!--             insert="false" -->
+<!--             update="false"  -->
+<!--             not-null="true"/> -->
+<!--         <many-to-one name="idCaracteristica" -->
+<!-- 		    class="org.sakaiproject.lessonbuildertool.CaracteristicaImpl" -->
+<!--             column="IDCARACTERISTICA" -->
+<!--             insert="false" -->
+<!--             update="false"  -->
+<!--             not-null="true"/> -->
+<!--         <many-to-one name="idActividad" class="org.sakaiproject.lessonbuildertool.ActividadImpl" fetch="select" insert="false" -->
+<!--             update="false"  -->
+<!--             not-null="true" lazy="false"> -->
+<!--             <column name="IDACTIVIDAD" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idCaracteristica" class="org.sakaiproject.lessonbuildertool.CaracteristicaImpl" insert="false" -->
+<!--             update="false"  -->
+<!--             not-null="true"fetch="select" lazy="false"> -->
+<!--             <column name="IDCARACTERISTICA" /> -->
+<!--         </many-to-one> -->
+        <property name="precondicion" type="boolean">
+            <column name="PRECONDICION" />
+        </property>
+        <property name="postcondicion" type="boolean">
+            <column name="POSTCONDICION" />
+        </property>
+        <property name="prioridad" type="int">
+            <column name="PRIORIDAD" />
+        </property>
+<!--          <property name="orden" type="int"> -->
+<!--             <column name="ORDEN" /> -->
+<!--         </property> -->
+    </class>
+</hibernate-mapping>

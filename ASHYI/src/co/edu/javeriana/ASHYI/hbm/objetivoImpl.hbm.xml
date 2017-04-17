@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.ObjetivoImpl" table="OBJETIVO">
+        <id name="idObjetivo" type="java.lang.Integer">
+            <column name="IDOBJETIVO" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <bag name="palabras" inverse="false" table="PALABRACLAVE_OBJETIVO" lazy="true" >
+        <!--<list name="caracteristicas" table="CARACTERISTICAS_ACTIVIDAD" lazy="true" fetch="select" > -->
+            <key >
+                <column name="IDOBJETIVO"/>
+            </key>
+<!--             <list-index column="ORDEN"/> -->
+            <one-to-many class="co.edu.javeriana.ASHYI.hbm.PalabraClaveImpl"  not-found="ignore"/>
+        </bag>
+    </class>
+</hibernate-mapping>

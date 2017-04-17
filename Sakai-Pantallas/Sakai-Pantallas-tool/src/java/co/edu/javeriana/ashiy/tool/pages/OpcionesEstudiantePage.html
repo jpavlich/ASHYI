@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+	<wicket:extend>
+		<h3>Opciones Estudiante:</h3>
+		<br wicket:id="id"/>
+		<!-- 		<br wicket:id="nombreCurso" /> -->
+		<!-- 		<br wicket:id="descripcionCurso" /> -->
+
+		<h4>Notificaciones:</h4>
+		<h5>(nueva) Se actualizo su estilo de aprendizaje a Pragmático</h5>
+		<h5>(nueva)  La Unidad Didactica 3 fue replanificada</h5>
+
+		<h4>Cursos Inscritos:</h4>
+		<table>
+			<tr wicket:id="listCursos">
+				<td><span wicket:id="nombre"></span></td>
+			</tr>
+		</table>
+		
+		<form wicket:id="formBotones">
+			<p>
+				<label>Seleccione un curso:</label> 
+				<br />
+				<select wicket:id="cursos"></select>
+			</p>
+			<input type="submit" value="Ver" /> 
+		</form>
+		<h4>Modificar Perfil</h4>
+		<form wicket:id="formPerfil">
+			<p>
+				<br />
+			</p>
+			<input type="submit" value="Cambiar Perfil" /> 
+		</form>
+
+	</wicket:extend>
+</body>
+</html>

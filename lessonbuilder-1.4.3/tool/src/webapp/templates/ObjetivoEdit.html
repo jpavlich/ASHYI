@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<script rsf:id="scr=portal-matter" type="text/javascript"
+	language="JavaScript" src="/library/js/headscripts.js"></script>
+<link rsf:id="scr=portal-matter" href="/library/skin/tool_base.css"
+	type="text/css" rel="stylesheet" media="all" />
+<link rsf:id="scr=portal-matter" href="/library/skin/default/tool.css"
+	type="text/css" rel="stylesheet" media="all" />
+<link rel="stylesheet" rsf:id="scr=rewrite-url"
+	href="../css/Simplepagetool.css" type="text/css" />
+<link rel="stylesheet" href="../css/BeatPicker.min.css" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/BeatPicker.min.js"></script>
+<script language="javascript" type="text/javascript" src="datetimepicker.js"></script>
+<script type='text/javascript'>
+function cambiarFechaF()
+{
+  var copiar = document.getElementById("demo2");
+  var pegar = document.getElementById("fecha_F");
+  pegar.value = copiar.value;
+}
+
+function cambiarFechaI()
+{
+  var copiar = document.getElementById("demo3");
+  var pegar = document.getElementById("fecha_I");
+  pegar.value = copiar.value;
+}
+
+function cambiarFechaFAnterior()
+{
+  var copiar = document.getElementById("fecha_FAnterior");
+  var pegar = document.getElementById("demo2");
+  pegar.value = copiar.value;
+}
+
+function cambiarFechaIAnterior()
+{
+  var copiar = document.getElementById("fecha_IAnterior");
+  var pegar = document.getElementById("demo3");
+  pegar.value = copiar.value;
+}
+</script>
+</head>
+<body rsf:id="scr=sakai-body">
+<h3 rsf:id="msg=objetivo.editar" style="color:#045FB4"></h3>
+<br />
+	<div class="portletBody" style="width: 1000px; height: 1000px;">	
+		<form action="#" rsf:id="objetivoC">
+			<table id="list" role="list" width="100%" border="2" align="left"
+				cellspacing="0" bordercolor="#000000" bgcolor="#045FB4">
+				<tr>
+					<td style="white-space: nowrap;"><span
+						rsf:id="link-textC" style="color: white"></span>
+						<input id="objId" type="hidden" size="25" rsf:id="objId"/>
+					</td>
+						
+					<td>
+						<span rsf:id="time-initialAnterior-label" style="color: white" /> 
+						<input id="fecha_IAnterior" type="text" size="25" rsf:id="fecha_IAnterior" readonly="readonly" />
+						<br />
+						<span rsf:id="time-initial-label" style="color: white" />
+<!-- 						<input rsf:id="initial:" type="text" data-beatpicker="true" -->
+<!-- 						data-beatpicker-id="myDatePicker" /> -->
+<!-- 						<input id="fecha_I" type="hidden" size="25" rsf:id="fecha_I"/> -->
+						<input id="demo3" type="text" size="25" onclick="cambiarFechaIAnterior()" rsf:id="demo3"/>
+<!-- 							<a href="javascript:NewCal('demo3','ddmmmyyyy',true,12)" onfocus="cambiarFechaI()"> -->
+							<a href="javascript:NewCal('demo3','ddmmmyyyy',true,12)">
+								<img src="/library/image/silk/calendar_view_week.png" width="16" height="16" border="0" alt="Pick a date"/>
+							</a>
+					</td>
+					<td>
+						<span rsf:id="time-finalAnterior-label" style="color: white" /> 
+						<input id="fecha_FAnterior" type="text" size="25" rsf:id="fecha_FAnterior" readonly="readonly" />
+						<br />
+						<span rsf:id="time-final-label" style="color: white" /> 
+<!-- 						<input -->
+<!-- 						rsf:id="final:" type="text" data-beatpicker="true" -->
+<!-- 						data-beatpicker-id="myDatePicker" /> -->						
+<!-- 						<input id="fecha_F" type="hidden" size="25" rsf:id="fecha_F"/> -->
+						<input id="demo2" type="text" size="25" onclick ="cambiarFechaFAnterior()" rsf:id="demo2"/>
+<!-- 							<a href="javascript:NewCal('demo2','ddmmmyyyy',true,12)" onfocus="cambiarFechaF()"> -->
+							<a href="javascript:NewCal('demo2','ddmmmyyyy',true,12)">
+								<img src="/library/image/silk/calendar_view_week.png" width="16" height="16" border="0" alt="Pick a date"/>
+							</a>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" class="bold" rsf:id="submit" /></td>
+					<td><input type="submit" rsf:id="cancel" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

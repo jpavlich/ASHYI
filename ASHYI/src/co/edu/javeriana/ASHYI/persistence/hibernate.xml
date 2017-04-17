@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+    Copyright (C) 2014 Pontificia Universidad Javeriana
+
+    Proyecto ASHYI
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+ 
+<!-- Hibernate session factory -->
+<bean id="sessionFactoryASHYI" 
+     class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+ 
+    <property name="dataSource">
+      <ref bean="dataSource"/>
+    </property>
+    
+ 
+    <property name="hibernateProperties">
+       <props>
+         <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+         <prop key="hibernate.show_sql">false</prop>
+		<prop key="hibernate.cache.use_query_cache">true</prop>
+		<prop key="hibernate.cache.use_second_level_cache">true</prop>
+		<prop key="hibernate.generate_statistics">false</prop>
+		<prop key="hibernate.cache.use_structured_entries">true</prop>
+		<prop key="hibernate.cache.region_prefix"></prop>
+		<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+		<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</prop>
+		<prop key="hibernate.connection.release_mode">after_transaction</prop>
+<!-- 		<prop key="current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</prop> -->
+ 	</props>
+   </property>
+ 
+     <property name="mappingResources">
+	<list>
+		<value>co/edu/javeriana/ASHYI/hbm/itemImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/tipo.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/actividadimpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/caracteristicasItemsUsuarioImpl.hbm.xml</value>
+		<value>co/edu/javeriana/ASHYI/hbm/caracteristicasTipoImpl.hbm.xml</value>
+		<value>co/edu/javeriana/ASHYI/hbm/caracteristicasUsuarioImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/actividadTieneActividadImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/caracteristicaCaracteristicasImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/caracteristicaActividadImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/caracteristica.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/usuario.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/controlimpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/objetivoImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/palabraClaveImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/palabraClaveActividadImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/respuestaItemsUsuarioImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/palabraClaveObjetivoImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/objetivosActividadImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/recursosActividadImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/recursoImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/caracteristicasRecursoImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/grafoImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/grafosUsuarioImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/grafoRelacionesImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/itemsUsuarioImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/itemPlanImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/logCaracteristicasImpl.hbm.xml</value>
+        <value>co/edu/javeriana/ASHYI/hbm/logGrafosImpl.hbm.xml</value>
+	</list>
+      </property>	
+ 
+    </bean>
+</beans>

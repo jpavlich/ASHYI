@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="org.sakaiproject.lessonbuildertool.ActividadTieneItemPlanImpl" table="ACTIVIDAD_TIENE_ITEM_PLAN">
+		<composite-id>
+			<key-many-to-one name="idActividad" class="org.sakaiproject.lessonbuildertool.ActividadImpl" column="IDACTIVIDAD"/>
+			<key-many-to-one name="idItemPlan" class="org.sakaiproject.lessonbuildertool.ItemPlanImpl" column="IDITEMPLAN"/>
+		</composite-id>
+		<property name="estiloItemPlan" type="java.lang.String">
+			<column name="ESTILOITEMPLAN" />
+		</property>
+	</class>
+</hibernate-mapping>

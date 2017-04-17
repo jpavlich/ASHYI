@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.ObjetivosActividadImpl" table="OBJETIVOS_ACTIVIDAD">
+<!--         <id name="idObjetivoActividad" type="int"> -->
+<!--             <column name="idObjetivoActividad" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+
+      	<composite-id>
+      		<key-many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" column="IDACTIVIDAD" />
+			<key-many-to-one name="idObjetivo" class="co.edu.javeriana.ASHYI.hbm.ObjetivoImpl" column="IDOBJETIVO" />
+<!-- 			<key-property name="idActividad" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+<!--         <many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" fetch="select" lazy="false"> -->
+<!--             <column name="IDACTIVIDAD" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idObjetivo" class="co.edu.javeriana.ASHYI.hbm.ObjetivoImpl" fetch="select" lazy="false"> -->
+<!--             <column name="IDOBJETIVO" /> -->
+<!--         </many-to-one> -->
+<!--         <property name="orden" type="int"> -->
+<!--             <column name="ORDEN" /> -->
+<!--         </property> -->
+		<property name="tipo" type="java.lang.Integer">
+            <column name="TIPO" not-null="false" default="null"/>
+        </property>
+    </class>
+</hibernate-mapping>

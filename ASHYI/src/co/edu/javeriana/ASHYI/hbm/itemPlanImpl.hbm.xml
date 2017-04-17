@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="co.edu.javeriana.ASHYI.hbm.ItemPlanImpl"
+		table="ITEM_PLAN">
+		<id name="idItemPlan" type="java.lang.Integer">
+			<column name="idItemPlan" />
+			<generator class="identity" />
+		</id>
+		<many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" fetch="join" access="field" lazy="proxy">
+			<column name="idActividad" />
+		</many-to-one>
+		<many-to-one name="idRecurso" class="co.edu.javeriana.ASHYI.hbm.RecursoImpl" fetch="join" access="field" lazy="proxy">
+			<column name="idRecurso" />
+		</many-to-one>
+		<property name="estaActivo" type="boolean">
+			<column name="estaActivo" />
+		</property>
+		<property name="orden" type="int">
+            <column name="ORDEN" />
+        </property>
+        <property name="tiempo_duracion" type="float">
+            <column name="TIEMPO_DURACION" />
+        </property>
+        <property name="fecha_inicial" type="java.util.Date">
+            <column name="FECHA_INICIAL" />
+        </property>
+        <property name="fecha_final" type="java.util.Date">
+            <column name="FECHA_FINAL" />
+        </property>
+         <many-to-one name="idUnidadDidacticaPadre" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" fetch="join" access="field" lazy="proxy">
+			<column name="idUnidadDidacticaPadre" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

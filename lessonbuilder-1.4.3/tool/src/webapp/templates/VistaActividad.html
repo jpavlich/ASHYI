@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
+<script rsf:id="scr=portal-matter" type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+
+<script>
+
+
+function startRead(evt) {
+    var file = document.getElementById(‘file‘).files[0];
+    if (file) {
+        //  getAsText(file);
+        alert("Name: " + file.name + "\n" + "Last Modified Date :" + file.lastModifiedDate);
+    }
+}
+
+</script>
+
+<link rsf:id="scr=portal-matter" href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+<link rsf:id="scr=portal-matter" href="/library/skin/default/tool.css" type="text/css" rel="stylesheet" media="all" />
+<link rel="stylesheet" rsf:id="scr=rewrite-url" href="../css/Simplepagetool.css" type="text/css"/>
+</head>
+<body rsf:id="scr=sakai-body">
+	<div class="portletBody">
+		
+		<div rsf:id="error-div" class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="margin-bottom: 20px; margin-top:20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<span rsf:id="error"></span> </p>
+			</div>
+		</div>
+		
+		  <iframe rsf:id="startupHelp" role="document"
+		   name="SimplePageIFrame"
+		   class="portletMainIframe multimedia"
+		   frameborder="0"
+		   onload="resizeiframe('iframe')"
+		   marginwidth="0"
+		   width="100%"
+		   height="500"
+		   marginheight="0"
+		   scrolling="auto"
+		   id="iframe"
+		   ></iframe>
+
+		<h2 rsf:id="msg=actividad.acceso" style="color:#045FB4"></h2>
+		<br />
+
+<div class="portletBody" style="width: 500px; height: 1000px;">
+<form rsf:id="uploadform" method="post" enctype="multipart/form-data">
+	<table width="100%" align="left" cellspacing="0" >
+	
+	<tr>
+		<td>
+<!-- 		<form action="#" rsf:id="actividadC"> -->
+			<h3 rsf:id="recurso-abrir" style="color:#045FB4"></h3>
+			<br />
+			<table id="list" role="list" width="100%" border="2" align="left" cellspacing="0" bordercolor="#000000" bgcolor="#045FB4">
+				<tr>					
+					<td>
+			            <span rsf:id="actividad-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+			        </td>
+			        <td>
+			            <label rsf:id="nombre:" style="color:white">
+			            </label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span rsf:id="descripcion-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<label rsf:id="descripcion:" style="color:white"></label>	
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<span rsf:id="recurso-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>						
+					</td>					
+					<td>						
+						<table>
+							<tr>
+<!-- 								<td> -->
+<!-- 									<div><a href="#" class="usebutton edit-link" onclick="return false" rsf:id="edit-link"></a></div> -->
+<!-- 			 						<img rsf:id="item-icon" height="16" width="16" alt="" style="position:relative; top:3px; margin-right:2px"/> -->
+<!-- 								</td> -->
+								<td rsf:id="item-td">
+								 
+								    <div rsf:id="link-div:" class="link-div">
+			                          <img rsf:id="item-icon" height="16" width="16" alt="" style="position:relative; top:3px; margin-right:2px"/>
+<!-- 								      <a class="itemlink" href="#" rsf:id="link" style="width:36px"><span rsf:id="link-note" class="offscreen"></span><span rsf:id="link-text" class="link-text itemtext"></span></a> -->
+<!-- 								      <span><span rsf:id="link-fake-note" class="offscreen"></span><span rsf:id="link-fake" class="link-text itemtext fake-disabled"></span></span> -->
+<!-- 								      <span rsf:id="link-button-span" class="navIntraTool" style="background-color:transparent;border:none"><a href="#" class="usebutton" rsf:id="link-button"><span rsf:id="link-button-text" class="link-text"></span></a><span rsf:id="link-button-fake" class="usebutton link-text fake-disabled"></span><span rsf:id="link-button-note" class="offscreen"></span><span rsf:id="link-button-fake-note" class="offscreen"></span></span> -->
+<!-- 								      <a class="itemcopylink" href="#" rsf:id="copylink"><span class="itemcopytext"  rsf:id="copylinktext"></span></a> -->
+<!-- 								      <span rsf:id="item-group-titles" class="item-group-titles"></span> -->
+								    </div>
+								    <div rsf:id="item-group-titles-div" class="item-group-titles"></div>
+								    <iframe
+								       name="BltiIFrame"
+								       class="portletMainIframe multimedia"
+								       frameborder="0"
+								       marginwidth="0"
+								       width="100%"
+								       height="300"
+								       marginheight="0"
+								       scrolling="auto"
+								       rsf:id="blti-iframe"
+							               id="blti-iframe"
+								       >
+								    </iframe>
+			
+								    <div class="rowdescription itemdescription" rsf:id="description"></div>
+<!-- 								  </div> -->
+								  <div style="display:none">
+								    <span rsf:id="current-item-id2" class="current-item-id2"></span>
+								    <span rsf:id="prerequisite-info" class="prerequisite-info"></span>
+								    <span rsf:id="type" class="type"></span>
+								    <span rsf:id="requirement-text" class="requirement-text"></span>
+								    <span rsf:id="page-next" class="page-next"></span>
+								    <span rsf:id="page-button" class="page-button"></span>
+								    <span rsf:id="edit-url" class="edit-url"></span>
+								    <span rsf:id="edit-settings-url" class="edit-settings-url"></span>
+								    <span rsf:id="item-samewindow" class="item-samewindow"></span>
+								    <span rsf:id="item-groups" class="item-groups"></span>
+								    <span rsf:id="item-height" class="item-height"></span>
+								    <span rsf:id="item-name" class="link-text"></span>
+								    <span rsf:id="item-format" class="item-format"></span>
+								    <span rsf:id="item-path" class="item-path"></span>
+								  </div>
+								</td>
+								<td>	
+									<a href="#" rsf:id="link" class="recurso-link" style="color:white"></a>
+								</td>
+							</tr>							
+						</table>
+					</td>					
+				</tr>
+				<tr>
+					<td>
+						<span rsf:id="respuestas-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<span rsf:id="repuestasS"  style="color:white"/>
+						<ul>
+							<li rsf:id="repuestas:" style="list-style-type:none">
+								<a href="#" rsf:id="listaRepuestas" class="listaRepuestas" style="color:white"><span rsf:id="listaRepuestas-text" style="color:white"></span></a>
+							</li>
+						</ul>
+						<a href="#" rsf:id="nuevaRta-link" class="recurso-link" style="color:white"></a>
+					</td>
+				</tr>
+			</table>
+<!-- 			</form> -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+<!-- 			<form action="#" rsf:id="actividadC2"> -->
+			 <table width="100%" border="2" align="left" cellspacing="0" bordercolor="#000000" bgcolor="#045FB4">					
+				<tr>
+   					<td>
+						<span rsf:id="competenciasPost-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+ 						<span rsf:id="competencias"/>
+							<li rsf:id="pageC:" style="list-style-type:none">
+								<input type="checkbox" rsf:id="listaCompetencias" /><span rsf:id="link-textC" style="color:white"></span> 
+							</li>
+            		</td>
+           		</tr> 
+				<tr>
+					<td>
+						<span rsf:id="nota-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<input type="number" min="0" max="5" rsf:id="nota:" value="0" step="0.01"/>
+					</td>
+				</tr>				
+<!-- 				<tr> -->
+<!-- 					<td> -->
+<!-- 						<input type="submit" class="bold" rsf:id="submit" /> -->
+<!-- 					</td> -->
+<!-- 					<td> -->
+<!-- 						<input type="submit" rsf:id="cancel" />	 -->
+<!-- 					</td> -->
+<!-- 				</tr> -->
+			</table>			
+			<input type="hidden" rsf:id="item-id" id="item-id" />
+			<input type="hidden" rsf:id="idActividad" id="idActividad" />
+			<input type="hidden" rsf:id="idTP" id="idTP" />
+			<input type="hidden" rsf:id="idTU" id="idTU" />
+			<input type="hidden" rsf:id="idRIU" id="idRIU" />
+			
+<!-- 		</form>	 -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+<!-- 			<form rsf:id="uploadform" method="post" enctype="multipart/form-data"> -->
+				<table width="100%" border="2" align="left" cellspacing="0" bordercolor="#000000" bgcolor="#045FB4">					
+					<tr>
+						<td>
+							<span rsf:id="retroalimentacionE-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+						</td>
+						<td>
+							<textarea rsf:id="retroalimentacionE:" rows="10" cols="40"></textarea>	
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span rsf:id="retroalimentacionP-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+						</td>
+						<td>
+							<textarea rsf:id="retroalimentacionP:" rows="10" cols="40"></textarea>	
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="2" align="left" cellspacing="0" bordercolor="#000000" bgcolor="#045FB4">
+					<tr>
+						<td>
+							<span rsf:id="recurso-labelS" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+						</td>
+						<td>
+						  <input name="archivo1" type="file" rsf:id="recurso"/><br/>
+						</td>						
+					</tr>
+					<tr>
+						<td>
+							<span rsf:id="recursoUpload-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+						</td>
+						<td>
+							<span rsf:id="recursoError" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+							<br />
+							 <a href="#" rsf:id="recursoUpload-link" id="recursoUpload-link" class="recursoUpload-link" style="color:white" target="_blank"> <span rsf:id="msg=registro.nuevoobjetivo"></span></a>
+						</td>
+					</tr>					
+				</table>			
+			</td>
+		</tr>
+		<tr>
+			<td>  
+			  <input rsf:id="submit" type="submit"/>
+			
+			  <input type="submit" rsf:id="cancel" />	  
+		  	</td>
+		</tr>	
+	</table>
+	</form>			
+		</div>
+	</div>
+</body>
+</html>

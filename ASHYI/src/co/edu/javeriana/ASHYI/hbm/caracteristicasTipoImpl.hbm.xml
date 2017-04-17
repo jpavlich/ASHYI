@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.CaracteristicasTipoImpl" table="CARACTERISTICAS_TIPO" >
+<!--         <id name="idCaracteristicaTipo" type="int"> -->
+<!--             <column name="idCaracteristicaTipo" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+		<composite-id>
+      		<key-many-to-one name="idTipo" class="co.edu.javeriana.ASHYI.hbm.TipoImpl" column="IDTIPO" />
+			<key-many-to-one name="idCaracteristica" class="co.edu.javeriana.ASHYI.hbm.CaracteristicaImpl" column="IDCARACTERISTICA" />
+<!-- 			<key-property name="idRecurso" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+<!--         <many-to-one name="idTipo" class="co.edu.javeriana.ASHYI.hbm.TipoImpl" fetch="select"> -->
+<!--             <column name="IDTIPO" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idCaracteristica" class="co.edu.javeriana.ASHYI.hbm.CaracteristicaImpl" fetch="select"> -->
+<!--             <column name="IDCARACTERISTICA" /> -->
+<!--         </many-to-one> -->
+        <property name="linea" type="int">
+            <column name="LINEA" />
+        </property>
+    </class>
+</hibernate-mapping>

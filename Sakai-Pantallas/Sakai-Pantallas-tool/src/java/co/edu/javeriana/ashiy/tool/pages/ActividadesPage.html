@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+	<wicket:extend>
+<!-- 		<br /> -->
+<!-- 		User Agent from container<br /> -->
+<!-- 		<span wicket:id="userAgent"></span> -->
+<!-- 		<br /> -->
+<!-- 		<br />
+		User Agent from hashmap<br />
+		<span wicket:id="userAgent2"></span>
+		<br />-->
+		<br /> 
+ 		Actividades de unidad didáctica:<br />
+ 		<br wicket:id="unidad"/>
+ 		<br/>
+		<table>
+			<tr wicket:id="listactividades">
+				<td><span wicket:id="nombre"></span></td>
+				<!-- <td><span wicket:id="descripcion"></span></td> -->
+			</tr>
+<!-- 		<tr wicket:id="linksT">
+				 <td><span wicket:id="descripcion"></span></td>
+			</tr>
+			 -->
+		</table>
+		<form wicket:id="formAct">
+			<p>
+				<label>Actividades activas:</label> 
+				<br />
+				<select wicket:id="actividades"></select>
+			</p>
+			<input type="submit" value="Realizar" />
+		</form>
+	</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
+<script rsf:id="scr=portal-matter" type="text/javascript" language="JavaScript" src="/library/js/headscripts.js"></script>
+<link rsf:id="scr=portal-matter" href="/library/skin/tool_base.css" type="text/css" rel="stylesheet" media="all" />
+<link rsf:id="scr=portal-matter" href="/library/skin/default/tool.css" type="text/css" rel="stylesheet" media="all" />
+<link rel="stylesheet" rsf:id="scr=rewrite-url" href="../css/Simplepagetool.css" type="text/css"/>
+<title rsf:id="msg=simplepage.actividad.chooser"></title>
+
+
+</head>
+<body rsf:id="scr=sakai-body">
+	<div class="portletBody">
+		
+		<div rsf:id="error-div" class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="margin-bottom: 20px; margin-top:20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<span rsf:id="error"></span> </p>
+			</div>
+		</div>
+		
+		<div rsf:id="tool-bar:" class="navIntraTool" role="toolbar" style="z-index:100000" aria-labelledby="tool-bar::toolbar-label">
+			<h3 id="toolbar-label" rsf:id="msg=simplepage.toolbar" class="offscreen"></h3>
+			<ul id="toolbar" style="padding:2px; margin:0px">
+				<li><a href="#" rsf:id="reorder"><span rsf:id="msg.simplepage.reorder"></span></a></li>
+				<li><a href="#" rsf:id="add-text"><span rsf:id="msg.simplepage.text"></span></a></li>				
+				<li><a href="#" rsf:id="add-multimedia" class="add-multimedia"><span rsf:id="msg.simplepage.multimedia"></span></a></li>
+				<li><a href="#" rsf:id="add-actividad"><span rsf:id="msg.simplepage.actividad"></span></a></li>
+				<li><a href="#" rsf:id="add-resource" class="add-resource"><span rsf:id="msg.simplepage.resource"></span></a></li>
+				<li><a href="#" rsf:id="subpage-link" class="subpage-link"><span rsf:id="msg=simplepage.subpage"></span></a></li>
+				<li><a href="#" rsf:id="add-assignment"><span rsf:id="msg.simplepage.assignment"></span></a></li>
+				<li><a href="#" rsf:id="add-quiz"><span rsf:id="msg.simplepage.quiz"></span></a></li>
+				<a href="#" rsf:id="help" target="_blank"></a>
+				
+				<li class="dropdown" style="z-index:900">
+					<span><a href="#" onclick="return false;" rsf:id="msg=simplepage.more-tools" ></a></span>
+				
+				</li>
+			</ul>
+		</div>
+		
+		<div id="dropDownDiv" style="display:none" class="navIntraTool" role="menu" aria-label="More menu options">
+		  <span rsf:id="forum-descrip">
+		    <a role="menuitem" class="add-forum-link" href="#" rsf:id="add-forum"><span rsf:id="msg.simplepage.forum"></span></a>
+		    <span rsf:id="msg=simplepage.forum-descrip"></span>
+		    <br />
+		  </span>
+		  
+		  <span rsf:id="addwebsite-descrip">
+		    <a href="#" role="menuitem" rsf:id="add-website" class="add-website"><span rsf:id="msg.simplepage.website"></span></a>
+		    <span rsf:id="msg=simplepage.addwebsite-descrip"></span>
+		    <br />
+		  </span>
+		  
+		  <span rsf:id="student-descrip">
+		    <a href="#" role="menuitem" rsf:id="add-comments"><span rsf:id="msg.simplepage.comments"></span></a>
+		    <span rsf:id="msg=simplepage.comments-descrip"></span>
+		    <br />
+		    <a href="#" role="menuitem" rsf:id="add-content"><span rsf:id="msg.simplepage.add-content"></span></a>
+		    <span rsf:id="msg=simplepage.student-descrip"></span>
+		    <br />
+		    <br />
+		  </span>
+		  
+		  <span rsf:id="title-descrip">
+		    <a href="#" role="menuitem" rsf:id="edit-title" id="edit-title"><span rsf:id="edit-title-text"></span></a>
+		    <span rsf:id="title-descrip-text"></span>
+		    <br />
+		  </span>
+		  </div>
+		  
+		  <iframe rsf:id="startupHelp" role="document"
+		   name="SimplePageIFrame"
+		   class="portletMainIframe multimedia"
+		   frameborder="0"
+		   onload="resizeiframe('iframe')"
+		   marginwidth="0"
+		   width="100%"
+		   height="500"
+		   marginheight="0"
+		   scrolling="auto"
+		   id="iframe"
+		   ></iframe>
+
+		<h3 rsf:id="msg=actividad.crear" style="color:#4C0B5F"></h3>
+		<br />
+
+		<div rsf:id="actividad-create:" style="margin-left:2em">
+		  <a href="#" rsf:id="actividad-create-link"></a>
+		</div>
+		<div class="portletBody" style="width: 100px; height: 1000px;">
+		<form action="#" rsf:id="actividadC">
+			<table id="list" role="list" width="40%" border="2" align="left" cellspacing="0" bordercolor="#000000" bgcolor="#380B61">
+				<tr>					
+					<td>
+			            <span rsf:id="actividad-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+			        </td>
+			        <td>
+			            <input type="text" size="33" maxlength="30" rsf:id="nombre:">
+			            </input>
+					</td>
+				</tr>
+				<tr>					
+					<td>
+			            <span rsf:id="actividad-tipo" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+			        </td>
+			        <td>
+			            <input type="number" size="33" maxlength="30" rsf:id="tipo:">
+			            </input>
+					</td>
+				</tr>
+				<tr >
+					<td>
+					<span rsf:id="descripcion-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<textarea rsf:id="descripcion:" rows="10" cols="40"></textarea>	
+					</td>
+				</tr>
+				
+				<tr >
+					<td>
+					<span rsf:id="goal-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<textarea rsf:id="goal:" rows="10" cols="40"></textarea>	
+					</td>
+				</tr>
+				
+				<tr >
+					<td>
+					<span rsf:id="time-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td>
+						<span  rsf:id="time-initial-label" style="color:white"/>
+						<input rsf:id="initial:" type="datetime-local" min="2013-01-01T00:00Z" max="2019-01-01T00:05Z" />
+						
+						<span  rsf:id="time-final-label" style="color:white"/>
+						<input rsf:id="final:" type="datetime-local" min="2013-01-01T00:00Z" max="2019-01-01T00:05Z" />
+					</td>
+				</tr>
+				
+				<tr >
+					<td>
+					<span rsf:id="charct-label" style="color:white"></span><span class="bold" style="margin-left:5px;"></span>
+					</td>
+					<td bgcolor="#FFFFFF">
+						
+						<table cellspacing="2" cellpadding="2" border="0"> 
+					       <tr> 
+					            <td><input type="checkbox" name="carac" id="carac1"/> </td> 
+					            <td><span rsf:id="carac1"></span>  </td> 
+					       </tr> 
+					       <tr>
+					            <td> <input type="checkbox" name="carac" id="carac2"/> </td>
+					            <td> <span rsf:id="carac2"></span> </td> 
+					        </tr> 
+				        </table> 
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type="submit" class="bold" rsf:id="submit" />
+					</td>
+					<td>
+						<input type="submit" rsf:id="cancel" />	
+					</td>
+				</tr>
+			</table>
+			
+			
+			<input type="hidden" rsf:id="item-id" id="item-id" />
+			
+		</form>
+		</div>
+	</div>
+</body>
+</html>

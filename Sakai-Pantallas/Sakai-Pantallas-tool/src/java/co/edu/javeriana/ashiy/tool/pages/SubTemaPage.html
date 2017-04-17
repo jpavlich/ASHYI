@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+<wicket:extend>
+	<h3>Subtemas:</h3>
+ <br wicket:id="nombreSubtema"/>
+	<br wicket:id="descripcionsubTema"/>	
+	<h4>Datos de subtema:</h4>
+	<form wicket:id="formSTD">
+		<p>
+			<label>Unidades didácticas:</label> 
+			<br />
+			<select wicket:id="unidades"></select>
+		</p>
+		<input type="submit" value="Ver" />
+	</form>		 
+</wicket:extend>
+</body>
+</html>

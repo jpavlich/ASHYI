@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+	<wicket:extend>
+	
+		<h3>Curso:</h3>
+		<br wicket:id="nombreCurso"/>
+		<br wicket:id="descripcionCurso"/>	
+
+		<br /> 
+ 		<h3>Listado de temáticas de estudiante</h3>
+ 		
+<!-- 		<table>
+			<tr wicket:id="listtopics">
+				<td><span wicket:id="nombre"></span></td>
+				<!-- <td><span wicket:id="descripcion"></span></td> 
+			</tr>
+			 -->
+<!-- 		<tr wicket:id="linksT">
+				 <td><span wicket:id="descripcion"></span></td>
+			</tr>
+			</table>
+			 -->
+		
+		<form wicket:id="form">
+			<p>
+				<label>Temas del estudiante:</label> 
+				<br />
+				<select wicket:id="temas"></select>
+			</p>
+			<input type="submit" value="Ver" />
+		</form>
+	</wicket:extend>
+</body>
+</html>

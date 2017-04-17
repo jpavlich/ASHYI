@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html rsf:id="html" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<!-- <script src="../js/jquery.jsPlumb-1.4.1-all.js"></script> -->
+<script src="../js/dom.jsPlumb-1.6.2-min.js"></script>
+<style type='text/css'>
+
+
+.objActivity {
+	border: 2px solid black;
+	color: black;
+	font-family: helvetica;
+	font-size: 0.8em;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	position: absolute;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F7D29E),
+		to(#F5AC47));
+	background-image: -webkit-linear-gradient(top, #F7D29E, #F5AC47);
+	background-image: -moz-linear-gradient(top, #F7D29E, #F5AC47);
+	background-image: -o-linear-gradient(top, #F7D29E, #F5AC47);
+	background-image: linear-gradient(to bottom, #F7D29E, #F5AC47);
+}
+
+.inactiva {
+	border: 2px solid black;
+	color: black;
+	font-family: helvetica;
+	font-size: 0.8em;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	position: absolute;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#BDC2C7),
+		to(#A8ABB5));
+	background-image: -webkit-linear-gradient(top, #BDC2C7, #A8ABB5);
+	background-image: -moz-linear-gradient(top, #BDC2C7, #A8ABB5);
+	background-image: -o-linear-gradient(top, #BDC2C7, #A8ABB5);
+	background-image: linear-gradient(to bottom, #BDC2C7, #A8ABB5);
+}
+.refActivity {
+	border: 2px solid black;
+	color: black;
+	font-family: helvetica;
+	font-size: 0.8em;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	position: absolute;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#BAD7F7),
+		to(#82B9F5));
+	background-image: -webkit-linear-gradient(top, #BAD7F7, #82B9F5);
+	background-image: -moz-linear-gradient(top, #BAD7F7, #82B9F5);
+	background-image: -o-linear-gradient(top, #BAD7F7, #82B9F5);
+	background-image: linear-gradient(to bottom, #BAD7F7, #82B9F5);
+}
+
+.activityButton {
+	border: 1px solid black;
+	color: black;
+	font-family: helvetica;
+	font-size: 10px;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#724D73),
+		to(#8C748B));
+	background-image: -webkit-linear-gradient(top, #724D73, #8C748B);
+	background-image: -moz-linear-gradient(top, #724D73, #8C748B);
+	background-image: -o-linear-gradient(top, #724D73, #8C748B);
+	background-image: linear-gradient(to bottom, #724D73, #8C748B);
+}
+
+.objNodeClass {
+	border: 0px;
+	color: black;
+	font-family: helvetica;
+	font-size: 0.8em;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	position: absolute;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+/* 	background-image: -webkit-gradient(linear, left top, left bottom, from(#EDE6E3), */
+/* 		to(#B38D91)); */
+/* 	background-image: -webkit-linear-gradient(top, #EDE6E3, #B38D91); */
+/* 	background-image: -moz-linear-gradient(top, #EDE6E3, #B38D91); */
+/* 	background-image: -o-linear-gradient(top, #EDE6E3, #B38D91); */
+/* 	background-image: linear-gradient(to bottom, #EDE6E3, #B38D91); */
+}
+
+.refNodeClass {
+	
+	border: 0px;
+	color: black;
+	font-family: helvetica;
+	font-size: 0.8em;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	position: absolute;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+/* 	background-image: -webkit-gradient(linear, left top, left bottom, from(#996699), */
+/* 		to(#FFCCFF)); */
+/* 	background-image: -webkit-linear-gradient(top, #996699, #FFCCFF); */
+/* 	background-image: -moz-linear-gradient(top, #996699, #FFCCFF); */
+/* 	background-image: -o-linear-gradient(top, #996699, #FFCCFF); */
+/* 	background-image: linear-gradient(to bottom, #996699, #FFCCFF); */
+}
+
+.circle{
+  	border-radius: 50%;
+   	border: 1px solid black;
+	color: black;
+	font-family: helvetica;
+	font-size: 14px;
+	height: 12em;
+	opacity: 1;
+	padding: 0.5em;
+	width: 14em;
+	z-index: 20;
+	text-align: center;
+	position: absolute;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#22D61C),
+		to(#188C14));
+	background-image: -webkit-linear-gradient(top, #22D61C, #188C14);
+	background-image: -moz-linear-gradient(top, #22D61C, #188C14);
+	background-image: -o-linear-gradient(top, #22D61C, #188C14);
+	background-image: linear-gradient(to bottom, #22D61C, #188C14);
+}
+
+.dragActive {
+	border: 4px solid red;
+}
+
+html,body {
+	height: 100%;
+}
+</style>
+</head>
+<body rsf:id="scr=sakai-body" >
+  <div class="portletBody" style="width: 300px; height: 1000px;">
+	<div style="position: absolute;">
+	<form action="#" rsf:id="formC">
+			<input type="submit" rsf:id="cancel"/>
+		</form>
+		<button id="Reload" onclick="onReload()">Reload existing
+			flowchart</button>
+		<button id="Clear" onclick="onClearConnections()" disabled="disabled">Limpiar
+			conexiones</button>
+		<button id="SaveGraph" onclick="onSaveGraph()">Guardar Grafo</button>
+<!-- 		<input type="button" value="Cancel" -->
+<!-- 			onClick="history.go(-1);return true;" /> -->
+	<div rsf:id="errorEstudiante"></div>
+	</div>
+	<div rsf:id="esperarActividades"></div>
+	<img id="smiley" src="../images/Happyface4.svg" style="display: none" />
+
+	<div id="canvas" class="portletBody" style="width: 100px; height: 1000px;"></div>
+	<div id="template-actividadInicio" class="circle"
+		template="actividadInicio"
+		style="width: 110px; height: 110px; display: none;">
+		<!-- 		onmouseup="updateItemPlan(this)"> -->
+		<p onclick="toggleActive(this.parentNode)"
+			style="line-height: 1; display: inline">Actividad x</p>
+		<br /> <img id="editActivityImg" src="/library/image/silk/flag_green.png"
+			style="display: inline; width: 40px; height: 40px;"
+			onclick="editActivity(this.parentNode)" />
+	</div>
+	<div id="template-actividadNormal" class="objActivity"
+		template="actividadNormal"
+		style="width: 100px; height: 100px; display: none;">
+		<!-- 		onmouseup="updateItemPlan(this)"> -->
+		<p onclick="toggleActive(this.parentNode)"
+			style="line-height: 1; display: inline">Actividad x</p>
+		<br /> <img id="editActivityImg" src="/library/image/silk/pencil.png"
+			style="display: inline; width: 40px; height: 40px;"
+			onclick="editActivity(this.parentNode)" />
+	</div>
+	<div id="template-actividadInactiva" class="inactiva"
+		template="actividadNormal"
+		style="width: 100px; height: 100px; display: none;">
+		<p onclick="toggleActive(this.parentNode)"
+			style="line-height: 1; display: inline">Actividad x</p>
+		<br /> <img id="editActivityImg" src="/library/image/silk/pencil.png"
+			style="display: inline; width: 40px; height: 40px;"
+			onclick="editActivity(this.parentNode)" />
+	</div>
+	<div id="template-actividadRefuerzo" class="refActivity"
+		template="actividadRefuerzo"
+		style="width: 100px; height: 100px; display: none;">
+		<p onclick="toggleActive(this.parentNode)"
+			style="line-height: 1; display: inline">Actividad de refuerzo</p>
+		<br /> <img id="editActivityImg" src="/library/image/silk/pencil.png"
+			style="display: inline; width: 40px; height: 40px;"
+			onclick="editActivity(this.parentNode)" />
+	</div>
+	<div id="template-objNode" class="objNodeClass"
+		template="template-objNode"
+		style="display: none; width: 100px; height: 30px;">
+		<p style="line-height: 1; display: inline">Objetivo</p>
+	</div>
+	<div id="template-refNode" class="refNodeClass"
+		template="template-refNode"
+		style="display: none; width: 100px; height: 30px;">
+		<p style="line-height: 1; display: inline">Refuerzo</p>
+	</div>
+	<p rsf:id="existingFlowChartLabel" name="existingFlowChartLabel"
+		style="display: none"></p>
+	<p rsf:id="existingActivities" name="existingActivities"
+		style="display: none"></p>
+	<script type="text/javascript" src="../js/testJSPlumb2.js"></script>
+
+	<form action="#" rsf:id="connectionsForm">
+		<input type="hidden" rsf:id="connectionText" name="connectionText" />
+		<input type="submit" rsf:id="saveConnection" name="saveConnection"
+			id="saveConnection" style="visibility: hidden" />
+	</form>
+
+	<form action="#" rsf:id="activitiesForm">
+		<input type="hidden" rsf:id="itemPlansText" name="itemPlansText" /> <input
+			type="submit" rsf:id="itemPlansUpdate" name="itemPlansUpdate"
+			id="itemPlansUpdate" style="visibility: hidden" />
+	</form>
+
+	<form action="#" rsf:id="editActivityForm">
+		<input type="hidden" rsf:id="currentActivityToEdit"
+			name="currentActivityToEdit" /> <a href="#"
+			rsf:id="nuevaActividad-link" id="nuevaActividad-link"
+			class="nuevaActividad-link" style="visibility: hidden"> <span
+			rsf:id="msg=registro.nuevoobjetivo"></span></a>
+	</form>
+
+	<input type="hidden" rsf:id="agenteInterface" id="agenteInterface" />
+	</div>
+</body>
+</html>

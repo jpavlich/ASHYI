@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.edu.javeriana.ASHYI.hbm.ItemsUsuarioImpl" table="Items_Usuario" >
+<!--         <id name="idActividadUsuario" type="int"> -->
+<!--             <column name="idActividadUsuario" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+		<composite-id>
+      		<key-many-to-one name="idItemPlan" class="co.edu.javeriana.ASHYI.hbm.ItemPlanImpl" column="idItemPlan" />
+			<key-many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" column="IDUSUARIO" />
+<!-- 			<key-property name="idActividad" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+<!--         <many-to-one name="idActividad" class="co.edu.javeriana.ASHYI.hbm.ActividadImpl" fetch="select"> -->
+<!--             <column name="IDACTIVIDAD" /> -->
+<!--         </many-to-one> -->
+<!--         <many-to-one name="idUsuario" class="co.edu.javeriana.ASHYI.hbm.UsuarioImpl" fetch="select"> -->
+<!--             <column name="IDUSUARIO" /> -->
+<!--         </many-to-one> -->
+        <property name="realizada" type="boolean">
+            <column name="REALIZADA" />
+        </property>
+        <property name="estaActivo" type="boolean">
+            <column name="ESTAACTIVO" />
+        </property>
+        <property name="nota" type="double">
+            <column name="NOTA" />
+        </property>
+        <property name="calificacion_usuario" type="double">
+            <column name="CALIFICACION_USUARIO" />
+        </property>
+        <bag name="respuestas" inverse="false" table="RESPUESTA_ITEMUSUARIO" lazy="true" cascade="all" >
+            <key>
+                <column name="idItemPlan" />
+                <column name="idUsuario" />
+            </key>
+<!--             <list-index column="ORDEN"/> -->
+            <one-to-many class="co.edu.javeriana.ASHYI.hbm.RespuestaItemsUsuarioImpl"  not-found="ignore"/>
+        </bag> 
+    </class>
+</hibernate-mapping>
+

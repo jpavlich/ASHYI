@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2013 09:26:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.sakaiproject.lessonbuildertool.CaracteristicasItemsUsuarioImpl" table="Caracteristicas_ItemsUsuario" >
+<!--         <id name="idActividadUsuario" type="int"> -->
+<!--             <column name="idActividadUsuario" /> -->
+<!--             <generator class="assigned"/> -->
+<!--         </id> -->
+		<composite-id>
+      		<key-many-to-one name="idItemPlan" class="org.sakaiproject.lessonbuildertool.ItemPlanImpl" column="idItemPlan" />
+			<key-many-to-one name="idUsuario" class="org.sakaiproject.lessonbuildertool.UsuarioImpl" column="IDUSUARIO" />
+			<key-many-to-one name="idCaracteristica" class="org.sakaiproject.lessonbuildertool.CaracteristicaImpl" column="idCaracteristica" />
+<!-- 			<key-property name="idActividad" column="IDACTIVIDAD"/> -->
+<!-- 			<key-property name="idCaracteristica" column="IDCARACTERISTICA"/> -->
+		</composite-id>
+        <property name="estado" type="boolean">
+            <column name="ESTADO" />
+        </property>
+        <property name="fecha" type="java.util.Date">
+            <column name="fecha" />
+        </property>
+    </class>
+</hibernate-mapping>
+
